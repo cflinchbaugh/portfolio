@@ -9,6 +9,17 @@ npm install
 npm run dev
 ```
 
+## Testing
+
+`npm run test`
+
+## Deployment
+
+`npm run build`
+`npm run deploy`
+
+After a few minutes, the live URL should update with the latest changes.
+
 ## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
