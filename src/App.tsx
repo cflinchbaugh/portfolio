@@ -1,25 +1,11 @@
-import { css } from "@emotion/css";
-import "./App.css";
+import { About } from "./pages/About";
+import { Hero } from "./pages/Hero";
 
 function App() {
   return (
     <>
-      <div
-        className={css`
-          font-size: 10em;
-        `}
-      >
-        CF
-      </div>
-
-      <div
-        className={css`
-          font-size: 2em;
-        `}
-      >
-        Chris Flinchbaugh
-      </div>
-      <div>Software Engineer | Front-End Specialized | UI/UX Engineer</div>
+      <Hero />
+      <About />
     </>
   );
 }
