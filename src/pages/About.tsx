@@ -92,9 +92,9 @@ export const About = () => {
     <div
       className={css`
         display: flex;
-        height: 100vh;
+        min-height: 100vh;
         background: linear-gradient(to bottom, #fe8a75 0%, #b5cbed 100%);
-        padding: 0 ${theme.spacing.lg};
+        padding: ${theme.spacing.lg};
       `}
     >
       <h2
