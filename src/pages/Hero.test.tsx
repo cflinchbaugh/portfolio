@@ -14,10 +14,8 @@ describe("Hero", () => {
 
   it("renders title", () => {
     render(<Hero />);
-    expect(
-      screen.getByText(
-        "Software Engineer | Front-End Specialized | UI/UX Engineer"
-      )
-    ).toBeInTheDocument();
+    expect(screen.getByText("Software Engineer")).toBeInTheDocument();
+    expect(screen.getByText("Front-End Specialized")).toBeInTheDocument();
+    expect(screen.getByText("UI/UX")).toBeInTheDocument();
   });
 });
