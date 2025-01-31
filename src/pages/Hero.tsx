@@ -21,13 +21,13 @@ export const Hero = () => {
       >
         CF
       </div>
-      <div
+      <h1
         className={css`
           font-size: ${theme.fontSizes.xxl};
         `}
       >
         Chris Flinchbaugh
-      </div>
+      </h1>
       <div>Software Engineer | Front-End Specialized | UI/UX Engineer</div>
     </div>
   );
