@@ -7,6 +7,13 @@ describe("Hero", () => {
     expect(screen.getByText("CF")).toBeInTheDocument();
   });
 
+  it("renders h1", () => {
+    render(<Hero />);
+    const h1 = screen.getByRole("heading");
+    expect(h1).toBeInTheDocument();
+    expect(h1).toHaveTextContent("Chris Flinchbaugh");
+  });
+
   it("renders name", () => {
     render(<Hero />);
     expect(screen.getByText("Chris Flinchbaugh")).toBeInTheDocument();
