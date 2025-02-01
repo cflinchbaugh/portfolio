@@ -9,6 +9,13 @@ describe("About", () => {
     expect(screen.getByText("Developer")).toBeInTheDocument();
   });
 
+  it("renders h2", () => {
+    render(<About />);
+    const h2 = screen.getByRole("heading");
+    expect(h2).toBeInTheDocument();
+    expect(h2).toHaveTextContent("About");
+  });
+
   it("renders specialize in people content", () => {
     render(<About />);
     expect(screen.getByText(/I specialize in/)).toBeInTheDocument();

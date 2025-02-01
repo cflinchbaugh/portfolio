@@ -94,16 +94,9 @@ export const About = () => {
         display: flex;
         min-height: 100vh;
         background: linear-gradient(to bottom, #fe8a75 0%, #b5cbed 100%);
-        padding: ${theme.spacing.lg};
       `}
     >
-      <h2
-        className={css`
-          display: none;
-        `}
-      >
-        About
-      </h2>
+      <h2 className="hidden">About</h2>
       <div
         className={css`
           display: flex;
@@ -111,6 +104,7 @@ export const About = () => {
           gap: ${theme.spacing.xl};
           max-width: 80vw;
           margin: auto;
+          padding: ${theme.spacing.lg};
         `}
       >
         <OneBoldDeveloper />
