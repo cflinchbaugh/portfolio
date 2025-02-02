@@ -88,6 +88,7 @@ const Problems = () => {
 };
 
 export const About = () => {
+  var test = "";
   return (
     <div
       className={css`
