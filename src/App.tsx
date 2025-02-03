@@ -1,6 +1,7 @@
 import { About } from "./pages/About";
 import { Achievements } from "./pages/Achievements";
 import { Hero } from "./pages/Hero";
+import { Projects } from "./pages/Projects";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Hero />
       <About />
       <Achievements />
+      <Projects />
     </main>
   );
 }
