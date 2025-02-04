@@ -75,9 +75,10 @@ export const Hero = () => {
           rel="noopener noreferrer"
         >
           <img
+            height={32}
+            width={32}
             src={`${LinkedIn}`}
             className={css`
-              height: 32px;
               background-color: #cf0276;
               border-radius: 15px;
               padding: 5px;
