@@ -12,6 +12,7 @@ npm run dev
 ## Testing
 
 `npm run test`
+`npm run test:coverage`
 
 ## Deployment
 

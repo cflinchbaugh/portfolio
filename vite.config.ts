@@ -13,5 +13,9 @@ export default defineConfig(({ mode }) => ({
     environment: "jsdom", // Simulates a browser environment
     setupFiles: "./src/setupTests.ts", // Where we configure extra utilities
     exclude: [...configDefaults.exclude, "e2e/**"], // Excludes e2e tests
+    coverage: {
+      provider: "v8",
+      exclude: ["src/main.tsx", "dist/*", "*.config.*", "src/vite-env.d.ts"],
+    },
   },
 }));
