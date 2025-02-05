@@ -1,6 +1,6 @@
 import { css } from "@emotion/css";
 import { theme } from "../theme";
-import LinkedIn from "/LinkedIn.webp";
+import linkedIn from "/linkedIn.webp";
 
 export const Hero = () => {
   return (
@@ -77,7 +77,7 @@ export const Hero = () => {
           <img
             height={32}
             width={32}
-            src={`${LinkedIn}`}
+            src={`${linkedIn}`}
             className={css`
               background-color: #cf0276;
               border-radius: 15px;

@@ -1,12 +1,12 @@
 import { render, screen } from "@testing-library/react";
 import { ImageLink } from "./ImageLink";
 import type { ImageLinkProps } from "./ImageLink";
-import Email from "/Email.webp";
+import email from "/email.webp";
 
 const data: ImageLinkProps = {
   alt: "Sample alt text",
   href: "https://www.google.com",
-  src: Email,
+  src: email,
 };
 
 describe("ImageLink", () => {
