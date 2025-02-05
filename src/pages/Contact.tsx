@@ -1,8 +1,8 @@
 import { css } from "@emotion/css";
 import { theme } from "../theme";
-import LinkedIn from "/LinkedIn.webp";
-import GitHub from "/GitHub.webp";
-import Email from "/Email.webp";
+import linkedIn from "/linkedIn.webp";
+import gitHub from "/gitHub.webp";
+import email from "/email.webp";
 import { ImageLink } from "../components/ImageLink";
 
 export const Contact = () => {
@@ -54,17 +54,17 @@ export const Contact = () => {
           <ImageLink
             alt="LinkedIn Logo"
             href="https://www.linkedin.com/in/christopher-flinchbaugh/"
-            src={`${LinkedIn}`}
+            src={linkedIn}
           />
           <ImageLink
             alt="Email Logo"
             href="mailto:christopher.e.flinchbaugh@gmail.com"
-            src={`${Email}`}
+            src={email}
           />
           <ImageLink
             alt="GitHub Logo"
             href="https://github.com/cflinchbaugh"
-            src={`${GitHub}`}
+            src={gitHub}
           />
         </div>
       </div>

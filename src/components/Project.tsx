@@ -8,6 +8,7 @@ export const Project = ({
   approach,
   challenges,
   description,
+  image,
   impact,
   links = [],
   name,
@@ -19,86 +20,108 @@ export const Project = ({
       className={css`
         display: flex;
         flex-direction: column;
-        gap: ${theme.spacing.md};
+        gap: ${theme.spacing.lg};
       `}
     >
-      <h3
-        className={css`
-          font-size: ${theme.fontSizes.xl};
-        `}
-      >
-        <strong>{name}</strong>
-      </h3>
-      <div>{subheader}</div>
-
-      <div>
-        <h4>
-          <strong>Description</strong>
-        </h4>
-
-        <div>{description}</div>
-      </div>
-
-      {Boolean(links.length) && (
+      {image && (
         <div
-          data-testid="project-links"
           className={css`
             display: flex;
-            flex-direction: row;
-            gap: ${theme.spacing.md};
+            width: 100%;
+            height: 300px; /* Set a fixed height */
+            background: url(${image}) center/cover no-repeat;
+            background-color: #98004b;
           `}
-        >
-          {links.map((link) => (
-            <a href={link.url} key={link.name} target="_blank">
-              {link.name}
-            </a>
-          ))}
-        </div>
+        ></div>
       )}
 
       <div
         className={css`
           display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          gap: ${theme.spacing.sm};
+          flex-direction: column;
+          gap: ${theme.spacing.lg};
         `}
       >
-        {tags.map((tag) => (
+        <h3
+          className={css`
+            font-size: ${theme.fontSizes.xl};
+          `}
+        >
+          <strong>{name}</strong>
+        </h3>
+        <div>{subheader}</div>
+
+        <div>
+          <h4>
+            <strong>Description</strong>
+          </h4>
+
+          <div>{description}</div>
+        </div>
+
+        {Boolean(links.length) && (
           <div
+            data-testid="project-links"
             className={css`
-              font-size: ${theme.fontSizes.xs};
-              border: solid 1px;
-              border-radius: ${theme.spacing.lg};
-              padding: ${theme.spacing.sm};
+              display: flex;
+              flex-direction: row;
+              gap: ${theme.spacing.md};
             `}
-            key={tag}
           >
-            {tag}
+            {links.map((link) => (
+              <a href={link.url} key={link.name} target="_blank">
+                {link.name}
+              </a>
+            ))}
           </div>
-        ))}
-      </div>
+        )}
 
-      <div>
-        <h4>
-          <strong>Challenges</strong>
-        </h4>
+        <div
+          className={css`
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: ${theme.spacing.sm};
+          `}
+        >
+          {tags.map((tag) => (
+            <div
+              className={css`
+                font-size: ${theme.fontSizes.xs};
+                border: solid 1px;
+                border-radius: ${theme.spacing.lg};
+                padding: ${theme.spacing.sm};
+              `}
+              key={tag}
+            >
+              {tag}
+            </div>
+          ))}
+        </div>
 
-        <div>{challenges}</div>
-      </div>
-      <div>
-        <h4>
-          <strong>Approach</strong>
-        </h4>
+        <div>
+          <h4>
+            <strong>Challenges</strong>
+          </h4>
 
-        <div>{approach}</div>
-      </div>
-      <div>
-        <h4>
-          <strong>Impact</strong>
-        </h4>
+          <div>{challenges}</div>
+        </div>
 
-        <div>{impact}</div>
+        <div>
+          <h4>
+            <strong>Approach</strong>
+          </h4>
+
+          <div>{approach}</div>
+        </div>
+
+        <div>
+          <h4>
+            <strong>Impact</strong>
+          </h4>
+
+          <div>{impact}</div>
+        </div>
       </div>
     </div>
   );
