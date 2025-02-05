@@ -14,7 +14,7 @@ export const Contact = () => {
         margin: auto;
         min-height: 100vh;
         background: linear-gradient(to bottom, #fe8a75 0%, #b5cbed 100%);
-        padding: ${theme.spacing.lg};
+        padding: ${theme.spacing.sm};
       `}
     >
       <h2 className="hidden">Contact</h2>
