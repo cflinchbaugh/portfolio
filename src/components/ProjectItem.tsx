@@ -36,6 +36,7 @@ export const ProjectItem = ({
     >
       {imageName && (
         <div
+          role="img"
           aria-label={imageAriaLabel}
           className={css`
             flex: 0 0 25vw; /* Prevents shrinking and ensures a fixed width */
