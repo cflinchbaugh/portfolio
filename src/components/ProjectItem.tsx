@@ -1,38 +1,62 @@
 import { css } from "@emotion/css";
 import { theme } from "../theme";
-import { type Project as ProjectData } from "../hooks/useProjects";
+import { type Project } from "../hooks/useProjects";
 
-type ProjectProps = ProjectData;
+export type ProjectItemProps = {
+  imagePositionStart?: boolean;
+} & Project;
 
-export const Project = ({
+export const ProjectItem = ({
   approach,
   challenges,
   description,
-  image,
+  imageName,
+  imageAriaLabel,
+  imagePositionStart = false,
   impact,
   links = [],
   name,
   subheader,
   tags,
-}: ProjectProps) => {
+}: ProjectItemProps) => {
+  const imagePosition = imagePositionStart ? "row" : "row-reverse";
+
   return (
     <div
+      data-image-position={imagePosition}
+      data-testid="project-item"
       className={css`
         display: flex;
         flex-direction: column;
         gap: ${theme.spacing.lg};
+        ${theme.mq.lg} {
+          flex-direction: ${imagePosition};
+        }
       `}
     >
-      {image && (
+      {imageName && (
         <div
+          aria-label={imageAriaLabel}
           className={css`
-            display: flex;
-            width: 100%;
-            height: 300px; /* Set a fixed height */
-            background: url(${image}) center/cover no-repeat;
+            flex: 0 0 25vw; /* Prevents shrinking and ensures a fixed width */
+
             background-color: #98004b;
+            content-visibility: auto;
+
+            background-image: url("${imageName}-300.avif");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            ${theme.mq.lg} {
+              background-image: url("${imageName}-600.avif");
+            }
+
+            ${theme.mq.xl} {
+              background-image: url("${imageName}-1280.avif");
+            }
           `}
-        ></div>
+        />
       )}
 
       <div

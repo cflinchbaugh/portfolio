@@ -2,7 +2,9 @@ import { About } from "./pages/About";
 import { Achievements } from "./pages/Achievements";
 import { Contact } from "./pages/Contact";
 import { Hero } from "./pages/Hero";
-import { Projects } from "./pages/Projects";
+
+import { Suspense, lazy } from "react";
+const Projects = lazy(() => import("./pages/Projects"));
 
 function App() {
   return (
@@ -10,7 +12,9 @@ function App() {
       <Hero />
       <About />
       <Achievements />
-      <Projects />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Projects />
+      </Suspense>
       <Contact />
     </main>
   );
