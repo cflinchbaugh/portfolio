@@ -1,13 +1,15 @@
 import { render, screen } from "@testing-library/react";
-import { Project } from "./Project";
-import { type Project as ProjectData } from "../hooks/useProjects";
+import { ProjectItem } from "./ProjectItem";
+import type { ProjectItemProps } from "./ProjectItem";
 
-const data: ProjectData = {
+const data: ProjectItemProps = {
   name: "Name",
   subheader: "Subheader",
   approach: "How its done",
   challenges: "What needs done",
   description: "What it is",
+  imageName: "learnalotl",
+  imageAriaLabel: "Hand writing with mechanical pencil",
   impact: "What result",
   links: [
     {
@@ -18,9 +20,9 @@ const data: ProjectData = {
   tags: ["First", "Second", "Third"],
 };
 
-describe("Project", () => {
+describe("ProjectItem", () => {
   it("renders the required data", () => {
-    render(<Project {...data} />);
+    render(<ProjectItem {...data} />);
 
     expect(screen.getByText("Name")).toBeInTheDocument();
     expect(screen.getByText("Subheader")).toBeInTheDocument();
@@ -37,7 +39,7 @@ describe("Project", () => {
 
   describe("when links are passed it", () => {
     it("renders each link", () => {
-      render(<Project {...data} />);
+      render(<ProjectItem {...data} />);
 
       expect(screen.queryByTestId("project-links")).toBeDefined();
       expect(screen.getByText("Link")).toHaveAttribute(
@@ -53,9 +55,34 @@ describe("Project", () => {
         ...data,
         links: undefined,
       };
-      render(<Project {...updatedData} />);
+      render(<ProjectItem {...updatedData} />);
 
       expect(screen.queryByTestId("project-links")).toBeNull();
+    });
+  });
+
+  describe("when imagePositionStart prop is false", () => {
+    it("sets data-image-position to 'row' when imagePositionStart is true", () => {
+      const updatedData = {
+        ...data,
+        imagePositionStart: true,
+      };
+      render(<ProjectItem {...updatedData} />);
+
+      const container = screen.getByTestId("project-item");
+      expect(container).toHaveAttribute("data-image-position", "row");
+    });
+
+    it("sets data-image-position to 'row-reverse' when imagePositionStart is false", () => {
+      const updatedData = {
+        ...data,
+        imagePositionStart: false,
+      };
+
+      render(<ProjectItem {...updatedData} />);
+
+      const container = screen.getByTestId("project-item");
+      expect(container).toHaveAttribute("data-image-position", "row-reverse");
     });
   });
 });

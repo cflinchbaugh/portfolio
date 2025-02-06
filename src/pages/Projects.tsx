@@ -1,6 +1,6 @@
 import { css } from "@emotion/css";
 import { theme } from "../theme";
-import { Project } from "../components/Project";
+import { ProjectItem } from "../components/ProjectItem";
 import { useProjects } from "../hooks/useProjects";
 
 export const Projects = () => {
@@ -22,19 +22,27 @@ export const Projects = () => {
       `}
     >
       <h2 className="hidden">Projects</h2>
-      {projectData.map((project) => (
-        <div
-          className={
-            css`
-              margin: auto;
-              max-width: 80vw;
-            ` + " frosted-glass"
-          }
-          key={project.name}
-        >
-          <Project key={project.name} {...project} />
-        </div>
-      ))}
+      {projectData.map((project, index) => {
+        const data = {
+          ...project,
+          imagePositionStart: Boolean(index % 2),
+        };
+        return (
+          <div
+            className={
+              css`
+                margin: auto;
+                max-width: 80vw;
+              ` + " frosted-glass"
+            }
+            key={project.name}
+          >
+            <ProjectItem key={project.name} {...data} />
+          </div>
+        );
+      })}
     </div>
   );
 };
+
+export default Projects;
