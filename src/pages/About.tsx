@@ -1,5 +1,6 @@
 import { css } from "@emotion/css";
 import { theme } from "../theme";
+import useFadeIn from "../hooks/useFadeIn";
 
 const OneBoldDeveloper = () => {
   return (
@@ -85,6 +86,8 @@ const Problems = () => {
 };
 
 export const About = () => {
+  useFadeIn();
+
   return (
     <div
       className={css`
@@ -103,7 +106,7 @@ export const About = () => {
           css`
             margin: auto;
             max-width: 80vw;
-          ` + " frosted-glass"
+          ` + " frosted-glass fade-in"
         }
       >
         <div

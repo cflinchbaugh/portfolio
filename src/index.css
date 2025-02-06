@@ -61,3 +61,13 @@ ul {
   border: 2px solid rgba(255, 255, 255, 0.3); /* border with subtle transparency */
   margin: auto;
 }
+
+/* Define the fade-in animation */
+.fade-in {
+  opacity: 0.2; /* Initially hidden */
+  transition: opacity 0.5s ease-in-out; /* Fading effect over 0.25s */
+}
+
+.fade-in-visible {
+  opacity: 1; /* Make the element fully visible when in view */
+}
