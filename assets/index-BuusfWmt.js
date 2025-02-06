@@ -177,4 +177,4 @@ Error generating stack: `+i.message+`
               &:hover {
                 background-color: #970256;
               }
-            `,alt:"LinkedIn Logo"})})})]}),$p=so.lazy(()=>Wd(()=>import("./Projects-CaQNyADd.js"),[]));function Ap(){return _.jsxs("main",{children:[_.jsx(Fp,{}),_.jsx(jp,{}),_.jsx(Op,{}),_.jsx(so.Suspense,{fallback:_.jsx("div",{children:"Loading..."}),children:_.jsx($p,{})}),_.jsx(Dp,{})]})}Ad.createRoot(document.getElementById("root")).render(_.jsx(so.StrictMode,{children:_.jsx(Ap,{})}));export{ie as c,_ as j,so as r,pe as t};
+            `,alt:"LinkedIn Logo"})})})]}),$p=so.lazy(()=>Wd(()=>import("./Projects-iHVRhhhY.js"),[]));function Ap(){return _.jsxs("main",{children:[_.jsx(Fp,{}),_.jsx(jp,{}),_.jsx(Op,{}),_.jsx(so.Suspense,{fallback:_.jsx("div",{children:"Loading..."}),children:_.jsx($p,{})}),_.jsx(Dp,{})]})}Ad.createRoot(document.getElementById("root")).render(_.jsx(so.StrictMode,{children:_.jsx(Ap,{})}));export{ie as c,_ as j,so as r,pe as t};

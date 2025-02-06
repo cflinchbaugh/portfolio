@@ -1,11 +1,11 @@
-import{j as e,c as n,t as i,r as b}from"./index-CcVl3Y1A.js";const f=({approach:o,challenges:s,description:r,imageName:a,imageAriaLabel:c,imagePositionStart:g=!1,impact:h,links:d=[],name:u,subheader:p,tags:m})=>{const l=g?"row":"row-reverse";return e.jsxs("div",{"data-image-position":l,"data-testid":"project-item",className:n`
+import{j as e,c as n,t as i,r as b}from"./index-BuusfWmt.js";const f=({approach:o,challenges:s,description:r,imageName:a,imageAriaLabel:c,imagePositionStart:g=!1,impact:h,links:d=[],name:u,subheader:p,tags:m})=>{const l=g?"row":"row-reverse";return e.jsxs("div",{"data-image-position":l,"data-testid":"project-item",className:n`
         display: flex;
         flex-direction: column;
         gap: ${i.spacing.lg};
         ${i.mq.lg} {
           flex-direction: ${l};
         }
-      `,children:[a&&e.jsx("div",{"aria-label":c,className:n`
+      `,children:[a&&e.jsx("div",{role:"img","aria-label":c,className:n`
             flex: 0 0 25vw; /* Prevents shrinking and ensures a fixed width */
 
             background-color: #98004b;
