@@ -38,25 +38,27 @@ export const ProjectItem = ({
         <div
           role="img"
           aria-label={imageAriaLabel}
-          className={css`
-            flex: 0 0 25vw; /* Prevents shrinking and ensures a fixed width */
+          className={
+            css`
+              flex: 0 0 25vw; /* Prevents shrinking and ensures a fixed width */
 
-            background-color: #98004b;
-            content-visibility: auto;
+              background-color: #98004b;
+              content-visibility: auto;
 
-            background-image: url("${imageName}-300.avif");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
+              background-image: url("${imageName}-300.avif");
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position: center;
 
-            ${theme.mq.lg} {
-              background-image: url("${imageName}-600.avif");
-            }
+              ${theme.mq.lg} {
+                background-image: url("${imageName}-600.avif");
+              }
 
-            ${theme.mq.xl} {
-              background-image: url("${imageName}-1280.avif");
-            }
-          `}
+              ${theme.mq.xl} {
+                background-image: url("${imageName}-1280.avif");
+              }
+            ` + " fade-in"
+          }
         />
       )}
 
@@ -129,7 +131,7 @@ export const ProjectItem = ({
             <strong>Challenges</strong>
           </h4>
 
-          <div>{challenges}</div>
+          <div className="fade-in">{challenges}</div>
         </div>
 
         <div>
@@ -137,7 +139,7 @@ export const ProjectItem = ({
             <strong>Approach</strong>
           </h4>
 
-          <div>{approach}</div>
+          <div className="fade-in">{approach}</div>
         </div>
 
         <div>
@@ -145,7 +147,7 @@ export const ProjectItem = ({
             <strong>Impact</strong>
           </h4>
 
-          <div>{impact}</div>
+          <div className="fade-in">{impact}</div>
         </div>
       </div>
     </div>

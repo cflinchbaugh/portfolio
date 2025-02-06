@@ -2,8 +2,11 @@ import { css } from "@emotion/css";
 import { theme } from "../theme";
 import { ProjectItem } from "../components/ProjectItem";
 import { useProjects } from "../hooks/useProjects";
+import useFadeIn from "../hooks/useFadeIn";
 
 export const Projects = () => {
+  useFadeIn();
+
   const projectData = useProjects();
 
   return (
