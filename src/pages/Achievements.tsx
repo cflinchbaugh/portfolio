@@ -14,20 +14,15 @@ export const Achievements = () => {
     >
       <h2 className="hidden">Achievements</h2>
 
-      <div
-        className={
-          css`
-            max-width: 80vw;
-          ` + " frosted-glass"
-        }
-      >
+      <div className="container-card frosted-glass">
         <div
-          className={css`
-            display: flex;
-            flex-direction: column;
-            gap: ${theme.spacing.xl};
-            max-width: 80vw;
-          `}
+          className={
+            css`
+              display: flex;
+              flex-direction: column;
+              gap: ${theme.spacing.xl};
+            ` + " container-card"
+          }
         >
           Some of my key achievements include:
           <ul

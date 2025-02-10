@@ -50,11 +50,11 @@ export const ProjectItem = ({
               background-repeat: no-repeat;
               background-position: center;
 
-              ${theme.mq.lg} {
+              ${theme.mq.md} {
                 background-image: url("${imageName}-600.avif");
               }
 
-              ${theme.mq.xl} {
+              ${theme.mq.lg} {
                 background-image: url("${imageName}-1280.avif");
               }
             ` + " fade-in"

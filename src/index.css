@@ -62,6 +62,15 @@ ul {
   margin: auto;
 }
 
+.container-card {
+  max-width: 80vw;
+}
+@media screen and (min-width: 1200px) {
+  .container-card {
+    max-width: 60vw;
+  }
+}
+
 /* Define the fade-in animation */
 .fade-in {
   opacity: 0.2; /* Initially hidden */

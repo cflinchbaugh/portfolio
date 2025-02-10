@@ -105,18 +105,18 @@ export const About = () => {
         className={
           css`
             margin: auto;
-            max-width: 80vw;
-          ` + " frosted-glass fade-in"
+          ` + " container-card frosted-glass fade-in"
         }
       >
         <div
-          className={css`
-            display: flex;
-            flex-direction: column;
-            gap: ${theme.spacing.xl};
-            max-width: 80vw;
-            margin: auto;
-          `}
+          className={
+            css`
+              display: flex;
+              flex-direction: column;
+              gap: ${theme.spacing.xl};
+              margin: auto;
+            ` + " container-card"
+          }
         >
           <OneBoldDeveloper />
 

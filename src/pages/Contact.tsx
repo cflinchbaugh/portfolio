@@ -26,30 +26,31 @@ export const Contact = () => {
             flex-direction: column;
             gap: ${theme.spacing.md};
             margin: auto;
-            max-width: 80vw;
-          ` + " frosted-glass"
+          ` + " container-card frosted-glass"
         }
       >
         <div
-          className={css`
-            display: flex;
-            flex-direction: column;
-            gap: ${theme.spacing.xl};
-            max-width: 80vw;
-            margin: auto;
-          `}
+          className={
+            css`
+              display: flex;
+              flex-direction: column;
+              gap: ${theme.spacing.xl};
+              margin: auto;
+            ` + " container-card"
+          }
         >
           You've heard a bit about me, I'd love to hear from you.
         </div>
 
         <div
-          className={css`
-            display: flex;
-            flex-direction: row;
-            gap: ${theme.spacing.lg};
-            max-width: 80vw;
-            justify-content: center;
-          `}
+          className={
+            css`
+              display: flex;
+              flex-direction: row;
+              gap: ${theme.spacing.lg};
+              justify-content: center;
+            ` + " container-card"
+          }
         >
           <ImageLink
             alt="LinkedIn Logo"
