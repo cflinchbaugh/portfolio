@@ -35,8 +35,7 @@ export const Projects = () => {
             className={
               css`
                 margin: auto;
-                max-width: 80vw;
-              ` + " frosted-glass"
+              ` + " container-card frosted-glass"
             }
             key={project.name}
           >

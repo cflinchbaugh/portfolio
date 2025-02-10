@@ -3,6 +3,15 @@ import Carousel from "../components/Carousel";
 import { useSkills } from "../hooks/useSkills";
 import { theme } from "../theme";
 
+const skillCardClass = css`
+  margin: auto;
+  padding: ${theme.spacing.md};
+`;
+
+const detailClass = css`
+  padding-bottom: ${theme.spacing.md};
+`;
+
 export const Skills = () => {
   const skillsData = useSkills();
 
@@ -28,9 +37,11 @@ export const Skills = () => {
         `}
       >
         <div
-          className={css`
-            padding: ${theme.spacing.md};
-          `}
+          className={
+            css`
+              padding: 4rem ${theme.spacing.md} 0 ${theme.spacing.md};
+            ` + " container-card"
+          }
         >
           Throughout my career, I've honed a diverse set of skills across
           various projects—many of them proprietary. Below, you'll find a
@@ -41,27 +52,16 @@ export const Skills = () => {
         <Carousel>
           {skillsData.map((skill) => (
             <div
-              className={
-                css`
-                  margin: auto;
-                  max-width: 80vw;
-                  padding: ${theme.spacing.md};
-                `
-                // ` + " frosted-glass"
-              }
+              className={`${skillCardClass} container-card`}
               key={skill.name}
             >
               <h3 className="text-xl font-semibold flex items-center gap-2">
-                <span>{skill.icon}</span> {skill.name}
+                <span>{skill.icon}</span> <strong>{skill.name}</strong>
               </h3>
 
               <ul>
-                {skill.details.map((detail) => (
-                  <li
-                    className={css`
-                      padding-bottom: ${theme.spacing.md};
-                    `}
-                  >
+                {skill.details.map((detail, index) => (
+                  <li className={detailClass} key={`${skill.name}-${index}`}>
                     {detail}
                   </li>
                 ))}
