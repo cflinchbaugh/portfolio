@@ -1,4 +1,4 @@
-import{j as e,c as n,t as i,r as f,u as b}from"./index-45b-2TJr.js";const v=({approach:o,challenges:s,description:r,imageName:a,imageAriaLabel:c,imagePositionStart:g=!1,impact:h,links:d=[],name:u,subheader:m,tags:p})=>{const l=g?"row":"row-reverse";return e.jsxs("div",{"data-image-position":l,"data-testid":"project-item",className:n`
+import{j as e,c as n,t as i,r as f,u as b}from"./index-Bz8twx_h.js";const v=({approach:o,challenges:s,description:r,imageName:a,imageAriaLabel:c,imagePositionStart:g=!1,impact:h,links:d=[],name:u,subheader:m,tags:p})=>{const l=g?"row":"row-reverse";return e.jsxs("div",{"data-image-position":l,"data-testid":"project-item",className:n`
         display: flex;
         flex-direction: column;
         gap: ${i.spacing.lg};
@@ -16,11 +16,11 @@ import{j as e,c as n,t as i,r as f,u as b}from"./index-45b-2TJr.js";const v=({ap
               background-repeat: no-repeat;
               background-position: center;
 
-              ${i.mq.lg} {
+              ${i.mq.md} {
                 background-image: url("${a}-600.avif");
               }
 
-              ${i.mq.xl} {
+              ${i.mq.lg} {
                 background-image: url("${a}-1280.avif");
               }
             `+" fade-in"}),e.jsxs("div",{className:n`
@@ -56,5 +56,4 @@ import{j as e,c as n,t as i,r as f,u as b}from"./index-45b-2TJr.js";const v=({ap
         padding: ${i.spacing.lg} ${i.spacing.sm}
       `,children:[e.jsx("h2",{className:"hidden",children:"Projects"}),o.map((s,r)=>{const a={...s,imagePositionStart:!!(r%2)};return e.jsx("div",{className:n`
                 margin: auto;
-                max-width: 80vw;
-              `+" frosted-glass",children:e.jsx(v,{...a},s.name)},s.name)})]})};export{j as Projects,j as default};
+              `+" container-card frosted-glass",children:e.jsx(v,{...a},s.name)},s.name)})]})};export{j as Projects,j as default};
