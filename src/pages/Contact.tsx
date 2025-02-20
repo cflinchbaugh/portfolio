@@ -17,56 +17,56 @@ export const Contact = () => {
         padding: ${theme.spacing.sm};
       `}
     >
-      <h2 className="hidden">Contact</h2>
+      <div className="container-card">
+        <h2 className="hidden">Contact</h2>
 
-      <div
-        className={
-          css`
-            display: flex;
-            flex-direction: column;
-            gap: ${theme.spacing.md};
-            margin: auto;
-          ` + " container-card frosted-glass"
-        }
-      >
         <div
           className={
             css`
               display: flex;
               flex-direction: column;
+              gap: ${theme.spacing.md};
+              margin: auto;
+            ` + " frosted-glass"
+          }
+        >
+          <div
+            className={css`
+              display: flex;
+              flex-direction: column;
               gap: ${theme.spacing.xl};
               margin: auto;
-            ` + " container-card"
-          }
-        >
-          You've heard a bit about me, I'd love to hear from you.
-        </div>
+            `}
+          >
+            You've heard a bit about me, I'd love to hear from you.
+          </div>
 
-        <div
-          className={
-            css`
-              display: flex;
-              flex-direction: row;
-              gap: ${theme.spacing.lg};
-              justify-content: center;
-            ` + " container-card"
-          }
-        >
-          <ImageLink
-            alt="LinkedIn Logo"
-            href="https://www.linkedin.com/in/christopher-flinchbaugh/"
-            src={linkedIn}
-          />
-          <ImageLink
-            alt="Email Logo"
-            href="mailto:christopher.e.flinchbaugh@gmail.com"
-            src={email}
-          />
-          <ImageLink
-            alt="GitHub Logo"
-            href="https://github.com/cflinchbaugh"
-            src={gitHub}
-          />
+          <div
+            className={
+              css`
+                display: flex;
+                flex-direction: row;
+                gap: ${theme.spacing.lg};
+                justify-content: center;
+              ` + " container-card"
+            }
+          >
+            <ImageLink
+              alt="LinkedIn Logo"
+              href="https://www.linkedin.com/in/christopher-flinchbaugh/"
+              src={linkedIn}
+            />
+            <ImageLink
+              alt="Email Logo"
+              href="mailto:christopher.e.flinchbaugh@gmail.com"
+              src={email}
+            />
+            <ImageLink
+              alt="GitHub Logo"
+              href="https://github.com/cflinchbaugh"
+              src={gitHub}
+            />
+          </div>
         </div>
       </div>
     </div>
