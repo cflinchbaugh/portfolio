@@ -26,49 +26,42 @@ export const Skills = () => {
         padding: ${theme.spacing.sm};
       `}
     >
-      <h2 className="hidden">Skills & Experience</h2>
+      <div className="container-card">
+        <h2 className="page-heading">Skills & Experience</h2>
 
-      <div
-        className={css`
-          margin: auto;
-          display: flex;
-          flex-direction: column;
-          gap: ${theme.spacing.lg};
-        `}
-      >
         <div
-          className={
-            css`
-              padding: 4rem ${theme.spacing.md} 0 ${theme.spacing.md};
-            ` + " container-card"
-          }
+          className={css`
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: ${theme.spacing.lg};
+          `}
         >
-          Throughout my career, I've honed a diverse set of skills across
-          various projects—many of them proprietary. Below, you'll find a
-          selection of these skills, each contributing to my ability to tackle
-          new challenges with confidence and efficiency.
+          <div>
+            Throughout my career, I've honed a diverse set of skills across
+            various projects—many of them proprietary. Below, you'll find a
+            selection of these skills, each contributing to my ability to tackle
+            new challenges with confidence and efficiency.
+          </div>
+
+          <Carousel>
+            {skillsData.map((skill) => (
+              <div className={skillCardClass} key={skill.name}>
+                <h3 className="text-xl font-semibold flex items-center gap-2">
+                  <span>{skill.icon}</span> <strong>{skill.name}</strong>
+                </h3>
+
+                <ul>
+                  {skill.details.map((detail, index) => (
+                    <li className={detailClass} key={`${skill.name}-${index}`}>
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </Carousel>
         </div>
-
-        <Carousel>
-          {skillsData.map((skill) => (
-            <div
-              className={`${skillCardClass} container-card`}
-              key={skill.name}
-            >
-              <h3 className="text-xl font-semibold flex items-center gap-2">
-                <span>{skill.icon}</span> <strong>{skill.name}</strong>
-              </h3>
-
-              <ul>
-                {skill.details.map((detail, index) => (
-                  <li className={detailClass} key={`${skill.name}-${index}`}>
-                    {detail}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </Carousel>
       </div>
     </div>
   );

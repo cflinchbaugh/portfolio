@@ -99,67 +99,70 @@ export const About = () => {
         padding: ${theme.spacing.sm};
       `}
     >
-      <h2 className="hidden">About</h2>
+      <div className="container-card">
+        <h2 className="hidden">About</h2>
 
-      <div
-        className={
-          css`
-            margin: auto;
-          ` + " container-card frosted-glass fade-in"
-        }
-      >
         <div
           className={
             css`
-              display: flex;
-              flex-direction: column;
-              gap: ${theme.spacing.xl};
               margin: auto;
-            ` + " container-card"
+            ` + " container-card frosted-glass fade-in"
           }
         >
-          <OneBoldDeveloper />
-
           <div
-            className={css`
-              ${theme.mq.md} {
-                margin-bottom: ${theme.spacing.xl};
-              }
-            `}
-          >
-            <strong>Hi, I'm Chris-</strong> a software engineer with over a
-            decade of experience building scalable, user-focused applications.
-            My passion lies in crafting intuitive and performant experiences
-            using modern frameworks like React and React Native, but I have a
-            strong background in API integration, architecture optimization, and
-            testing.
-          </div>
-
-          <div>
-            <div
-              className={css`
+            className={
+              css`
                 display: flex;
                 flex-direction: column;
                 gap: ${theme.spacing.xl};
+                padding: ${theme.spacing.xl};
+                margin: auto;
+              ` + " container-card"
+            }
+          >
+            <OneBoldDeveloper />
+
+            <div
+              className={css`
                 ${theme.mq.md} {
-                  flex-direction: row;
+                  margin-bottom: ${theme.spacing.xl};
                 }
               `}
             >
-              <div
-                className={css`
-                  flex: 1;
-                `}
-              >
-                <People />
-              </div>
+              <strong>Hi, I'm Chris-</strong> a software engineer with over a
+              decade of experience building scalable, user-focused applications.
+              My passion lies in crafting intuitive and performant experiences
+              using modern frameworks like React and React Native, but I have a
+              strong background in API integration, architecture optimization,
+              and testing.
+            </div>
 
+            <div>
               <div
                 className={css`
-                  flex: 1;
+                  display: flex;
+                  flex-direction: column;
+                  gap: ${theme.spacing.xl};
+                  ${theme.mq.md} {
+                    flex-direction: row;
+                  }
                 `}
               >
-                <Problems />
+                <div
+                  className={css`
+                    flex: 1;
+                  `}
+                >
+                  <People />
+                </div>
+
+                <div
+                  className={css`
+                    flex: 1;
+                  `}
+                >
+                  <Problems />
+                </div>
               </div>
             </div>
           </div>

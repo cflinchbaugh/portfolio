@@ -24,25 +24,29 @@ export const Projects = () => {
         padding: ${theme.spacing.lg} ${theme.spacing.sm}
       `}
     >
-      <h2 className="hidden">Projects</h2>
-      {projectData.map((project, index) => {
-        const data = {
-          ...project,
-          imagePositionStart: Boolean(index % 2),
-        };
-        return (
-          <div
-            className={
-              css`
-                margin: auto;
-              ` + " container-card frosted-glass"
-            }
-            key={project.name}
-          >
-            <ProjectItem key={project.name} {...data} />
-          </div>
-        );
-      })}
+      <div className="container-card">
+        <h2 className="page-heading">Projects</h2>
+
+        <div
+          className={css`
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+          `}
+        >
+          {projectData.map((project, index) => {
+            const data = {
+              ...project,
+              imagePositionStart: Boolean(index % 2),
+            };
+            return (
+              <div className="frosted-glass" key={project.name}>
+                <ProjectItem key={project.name} {...data} />
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };

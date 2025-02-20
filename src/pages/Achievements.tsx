@@ -15,24 +15,23 @@ export const Achievements = () => {
         padding: ${theme.spacing.sm};
       `}
     >
-      <h2 className="hidden">Achievements</h2>
-
-      <div className="container-card frosted-glass">
-        <div
-          className={
-            css`
+      <div className="container-card">
+        <h2 className="page-heading">Achievements</h2>
+        <div className="frosted-glass">
+          <div
+            className={css`
               display: flex;
               flex-direction: column;
               gap: ${theme.spacing.xl};
-            ` + " container-card"
-          }
-        >
-          Some of my key achievements include:
-          {achievementsData.map((item) => (
-            <div key={item.id}>
-              <strong>{item.head}</strong> {item.tail}
-            </div>
-          ))}
+            `}
+          >
+            Some of my key achievements include:
+            {achievementsData.map((item) => (
+              <div key={item.id}>
+                <strong>{item.head}</strong> {item.tail}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
