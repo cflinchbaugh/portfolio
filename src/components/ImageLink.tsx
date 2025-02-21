@@ -1,5 +1,3 @@
-import { css } from "@emotion/css";
-
 export type ImageLinkProps = {
   alt: string;
   href: string;
@@ -13,16 +11,7 @@ export const ImageLink = ({ alt, href, src }: ImageLinkProps) => {
         height={32}
         width={32}
         src={src}
-        className={css`
-          background-color: #cf0276;
-          border-radius: 15px;
-          padding: 5px;
-          transition: background 0.15s;
-
-          &:hover {
-            background-color: #970256;
-          }
-        `}
+        className="bg-[#cf0276] rounded-lg p-1.5 transition-colors hover:bg-[#970256]"
         alt={alt}
       ></img>
     </a>
