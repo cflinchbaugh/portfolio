@@ -1,5 +1,3 @@
-import { css } from "@emotion/css";
-import { theme } from "../theme";
 import { ProjectItem } from "../components/ProjectItem";
 import { useProjects } from "../hooks/useProjects";
 import useFadeIn from "../hooks/useFadeIn";
@@ -11,29 +9,13 @@ export const Projects = () => {
 
   return (
     <div
-      className={css`
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        gap: ${theme.spacing.lg};
-        min-height: 100vh;
-        background: linear-gradient(to bottom, #fe8a75 0%, #b5cbed 100%);
-        padding: ${theme.spacing.sm};
-
-        ${theme.mq.md} {
-        padding: ${theme.spacing.lg} ${theme.spacing.sm}
-      `}
+      className="flex flex-col m-auto gap-6 min-h-screen p-2 md:px-6 md:py-2
+        bg-[linear-gradient(to_bottom,_#fe8a75_0%,_#b5cbed_100%)]"
     >
       <div className="container-card">
         <h2 className="page-heading">Projects</h2>
 
-        <div
-          className={css`
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-          `}
-        >
+        <div className="flex flex-col gap-8">
           {projectData.map((project, index) => {
             const data = {
               ...project,
