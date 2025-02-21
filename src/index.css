@@ -60,8 +60,13 @@ ul {
 
 .page-heading {
   font-size: x-large;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   font-weight: bolder;
+}
+@media screen and (min-width: 768px) {
+  .page-heading {
+    padding-bottom: 2rem;
+  }
 }
 /* .hidden {
   position: absolute;
@@ -81,7 +86,12 @@ ul {
 .container-card {
   max-width: 95vw;
   margin: auto;
-  padding: 2rem 0;
+  padding: 0.5rem 0;
+}
+@media screen and (min-width: 768px) {
+  .container-card {
+    padding: 2rem 0;
+  }
 }
 @media screen and (min-width: 1200px) {
   .container-card {
