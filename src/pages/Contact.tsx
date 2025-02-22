@@ -5,13 +5,14 @@ import { ImageLink } from "../components/ImageLink";
 
 export const Contact = () => {
   return (
-    <div className="flex flex-col m-auto min-h-screen p-4 bg-[linear-gradient(to_bottom,_#fe8a75_0%,_#b5cbed_100%)]">
+    <div className="flex flex-col m-auto min-h-screen p-4 bg-brand-gradient-2">
       <div className="container-card">
         <h2 className="hidden">Contact</h2>
 
-        <div className="flex flex-col gap-4 m-auto frosted-glass">
-          <div className="flex flex-col m-auto">
-            You've heard a bit about me, I'd love to hear from you.
+        <div className="flex flex-col m-auto frosted-glass">
+          <div className="flex flex-col m-auto text-center">
+            You've heard a bit about me, <br />
+            I'd love to hear from you.
           </div>
 
           <div className="flex gap-6 justify-center container-card">

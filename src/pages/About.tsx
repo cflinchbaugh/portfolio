@@ -62,10 +62,7 @@ export const About = () => {
   useFadeIn();
 
   return (
-    <div
-      className="flex flex-col m-auto min-h-screen p-2 
-      bg-[linear-gradient(to_bottom,_#fe8a75_0%,_#b5cbed_100%)]"
-    >
+    <div className="flex flex-col m-auto min-h-screen p-2 bg-brand-gradient-2">
       <div className="container-card">
         <h2 className="hidden">About</h2>
 

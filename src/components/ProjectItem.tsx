@@ -49,7 +49,7 @@ export const ProjectItem = ({
         <div
           role="img"
           aria-label={imageAriaLabel}
-          className="fade-in flex-none w-full lg:w-[25vw] min-h-[200px] bg-[#98004b] bg-cover bg-no-repeat bg-center"
+          className="fade-in flex-none w-full lg:w-[25vw] min-h-[200px] bg-[var(--color-brand-primary-500)] bg-cover bg-no-repeat bg-center"
           style={{ backgroundImage: bgImage }}
         />
       )}

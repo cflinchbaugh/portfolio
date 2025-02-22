@@ -2,7 +2,7 @@ import linkedIn from "/linkedIn.webp";
 
 export const Hero = () => {
   return (
-    <div className="flex flex-col gap-4 items-center justify-center h-screen bg-[linear-gradient(to_bottom,_#ffffff_75%,_#fe8a75_100%)]">
+    <div className="flex flex-col gap-4 items-center justify-center h-screen bg-brand-gradient-1">
       <div className="text-[10rem]">CF</div>
       <h1 className="text-[2rem]">Chris Flinchbaugh</h1>
 
@@ -21,7 +21,7 @@ export const Hero = () => {
           rel="noopener noreferrer"
         >
           <img
-            className="bg-brand-primary-400 rounded-md p-1 hover:bg-brand-primary-600"
+            className="bg-brand-primary-400 rounded-lg p-1 hover:bg-brand-primary-600"
             height={32}
             width={32}
             src={`${linkedIn}`}

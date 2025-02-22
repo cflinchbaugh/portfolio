@@ -11,7 +11,7 @@ export const ImageLink = ({ alt, href, src }: ImageLinkProps) => {
         height={32}
         width={32}
         src={src}
-        className="bg-[#cf0276] rounded-lg p-1.5 transition-colors hover:bg-[#970256]"
+        className="bg-[var(--color-brand-primary-400)] rounded-lg p-1.5 transition-colors hover:bg-[var(--color-brand-primary-600)]"
         alt={alt}
       ></img>
     </a>

@@ -6,8 +6,18 @@
   --color-brand-primary-600: #970256;
 }
 
+@layer components {
+  .bg-brand-gradient-1 {
+    background: linear-gradient(to bottom, #ffffff 75%, #fe8a75 100%);
+  }
+
+  .bg-brand-gradient-2 {
+    background: linear-gradient(to bottom, #fe8a75 0%, #b5cbed 100%);
+  }
+}
+
 body {
-  color: #cf0276;
+  color: var(--color-brand-primary-400);
 }
 /* body {
   display: initial;
