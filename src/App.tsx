@@ -5,6 +5,7 @@ import { Hero } from "./pages/Hero";
 
 import { Suspense, lazy } from "react";
 import { Skills } from "./pages/Skills";
+import ThreeDCarousel from "./components/ThreeDCarousel";
 
 const ProfessionalHistory = lazy(() => import("./pages/ProfessionalHistory"));
 
@@ -12,6 +13,7 @@ function App() {
   return (
     <main>
       <Hero />
+      <ThreeDCarousel />
       <About />
       <Achievements />
       <Suspense fallback={<div>Loading...</div>}>

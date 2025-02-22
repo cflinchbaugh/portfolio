@@ -2,28 +2,37 @@ import { useEffect, useState } from "react";
 
 const images = [
   {
-    src: "/images/alex-knight-wfwUpfVqrKU-unsplash.jpg",
+    src: "/fintech-600.avif",
     alt: "Tokyo back alley",
   },
   {
-    src: "/images/erik-eastman-4HG5hlhmZg8-unsplash.jpg",
+    src: "/fintech-600.avif",
     alt: "Tokyo crossing",
   },
   {
-    src: "/images/jezael-melgoza-layMbSJ3YOE-unsplash.jpg",
+    src: "/fintech-600.avif",
     alt: "Tokyo Akihabara",
   },
   {
-    src: "/images/louie-martinez-IocJwyqRv3M-unsplash.jpg",
+    src: "/fintech-600.avif",
     alt: "Tokyo Tower",
   },
-  { src: "/images/c-m-DEQa7uZFRbw-unsplash.jpg", alt: "Akihabara Gashapon" },
-  { src: "/images/susann-schuster-RpuqBx9o6DY-unsplash.jpg", alt: "Neko" },
   {
-    src: "/images/yoav-aziz-tKCd-IWc4gI-unsplash.jpg",
+    src: "/fintech-600.avif",
+    alt: "Akihabara Gashapon",
+  },
+  {
+    src: "/fintech-600.avif",
+    alt: "Neko",
+  },
+  {
+    src: "/fintech-600.avif",
     alt: "Tokyo storefronts with Yakitori lantern",
   },
-  { src: "/images/luca-florio-BbdT0qTld90-unsplash.jpg", alt: "Tokyo Tower" },
+  {
+    src: "/fintech-600.avif",
+    alt: "Tokyo Tower",
+  },
 ];
 
 const ThreeDCarousel = () => {
