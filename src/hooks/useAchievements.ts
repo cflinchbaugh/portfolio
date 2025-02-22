@@ -14,12 +14,12 @@ const achievements: Achievement[] = [
   },
   {
     id: 1,
-    head: 'Won the "Champion of Process Improvement" award',
+    head: 'Awarded "Champion of Process Improvement"',
     tail: "for streamlining engineering workflows and enhancing efficiency, improving developer velocity across teams.",
   },
   {
     id: 2,
-    head: "Led cross-functional teams of 10-20 engineers",
+    head: "Led multiple cross-functional teams of 10-20 engineers",
     tail: "across IoT, manufacturing, ecommerce, and fintech projects; driving architecture decisions, best practices, and delivery of high-quality software.",
   },
   {
@@ -39,13 +39,18 @@ const achievements: Achievement[] = [
   },
   {
     id: 6,
-    head: "Improved developer productivity and code quality",
+    head: "Accelerated development velocity and reduced defects",
     tail: "by optimizing TypeScript configurations, streamlining workflows, and proactively identifying and resolving defects early in the development cycle.",
   },
   {
     id: 7,
     head: "Reduced manual QA testing time by more than 60%",
-    tail: "by implementing comprehensive unit and end-to-end testing with Jest, Vitest, and Playwright, significantly improving test reliability and catching regressions early.",
+    tail: "implemented comprehensive unit and end-to-end testing with Jest, Vitest, and Playwright, significantly improving test reliability and catching regressions early.",
+  },
+  {
+    id: 8,
+    head: "Spearheaded a Code Quality Initiative",
+    tail: "designed and deployed internal auditing tools and optimizations, improving code quality and and freeing up engineers to focus on high-value work.",
   },
 ];
 

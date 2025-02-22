@@ -67,7 +67,7 @@ export const About = () => {
         <h2 className="hidden">About</h2>
 
         <div className="m-auto frosted-glass fade-in">
-          <div className="flex flex-col gap-8 md:p-8 m-auto">
+          <div className="flex flex-col gap-8 md:px-8 m-auto">
             <OneBoldDeveloper />
 
             <div className="md:mb-8">
