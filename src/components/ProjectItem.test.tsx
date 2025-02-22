@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { ProjectItem } from "./ProjectItem";
 import type { ProjectItemProps } from "./ProjectItem";
 
@@ -26,15 +26,45 @@ describe("ProjectItem", () => {
 
     expect(screen.getByText("Name")).toBeInTheDocument();
     expect(screen.getByText("Subheader")).toBeInTheDocument();
-    // expect(screen.getByText("How its done")).toBeInTheDocument();
-    // expect(screen.getByText("What needs done")).toBeInTheDocument();
     expect(screen.getByText("What it is")).toBeInTheDocument();
+    // rendered by default
     expect(screen.getByText("What result")).toBeInTheDocument();
 
     // Each individual tag
     expect(screen.getByText("First")).toBeInTheDocument();
     expect(screen.getByText("Second")).toBeInTheDocument();
     expect(screen.getByText("Third")).toBeInTheDocument();
+  });
+
+  describe("when Approach is clicked", () => {
+    it("renders Approach data", () => {
+      render(<ProjectItem {...data} />);
+
+      fireEvent.click(screen.getByText("Approach"));
+      expect(screen.getByText("How its done")).toBeInTheDocument();
+    });
+  });
+
+  describe("when Challenges is clicked", () => {
+    it("renders Challenges data", () => {
+      render(<ProjectItem {...data} />);
+
+      fireEvent.click(screen.getByText("Challenges"));
+      expect(screen.getByText("What needs done")).toBeInTheDocument();
+    });
+  });
+
+  describe("when Impact is clicked", () => {
+    it("renders Impact data", () => {
+      render(<ProjectItem {...data} />);
+
+      // Impact is rendered by default, so select something else first
+      fireEvent.click(screen.getByText("Challenges"));
+      expect(screen.getByText("What needs done")).toBeInTheDocument();
+
+      fireEvent.click(screen.getByText("Impact"));
+      expect(screen.getByText("What result")).toBeInTheDocument();
+    });
   });
 
   describe("when links are passed it", () => {
