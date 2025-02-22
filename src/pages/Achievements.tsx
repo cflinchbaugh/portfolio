@@ -33,9 +33,9 @@ export const Achievements = () => {
             >
               <div className="flex h-full w-full frosted-glass">
                 <div>
-                  <p className="mb-2 text-2xl font-semibold">
+                  <h3 className="mb-2 text-2xl font-semibold">
                     {achievement.head}
-                  </p>
+                  </h3>
                   <p>{achievement.tail}</p>
                 </div>
               </div>

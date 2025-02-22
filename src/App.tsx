@@ -11,14 +11,26 @@ const ProfessionalHistory = lazy(() => import("./pages/ProfessionalHistory"));
 function App() {
   return (
     <main>
-      <Hero />
-      <About />
-      <Achievements />
-      <Suspense fallback={<div>Loading...</div>}>
-        <ProfessionalHistory />
-      </Suspense>
-      <Skills />
-      <Contact />
+      <section>
+        <Hero />
+      </section>
+      <section>
+        <About />
+      </section>
+      <section>
+        <Achievements />
+      </section>
+      <section>
+        <Suspense fallback={<div>Loading...</div>}>
+          <ProfessionalHistory />
+        </Suspense>
+      </section>
+      <section>
+        <Skills />
+      </section>
+      <section>
+        <Contact />
+      </section>
     </main>
   );
 }

@@ -4,8 +4,7 @@ import { Achievements } from "./Achievements";
 describe("Achievements", () => {
   it("renders h2", () => {
     render(<Achievements />);
-    const h2 = screen.getByRole("heading");
-    expect(h2).toBeInTheDocument();
-    expect(h2).toHaveTextContent("Professional Achievements");
+    const headings = screen.getAllByRole("heading");
+    expect(headings[0]).toHaveTextContent("Professional Achievements");
   });
 });
