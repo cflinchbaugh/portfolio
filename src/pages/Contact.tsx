@@ -1,5 +1,3 @@
-import { css } from "@emotion/css";
-import { theme } from "../theme";
 import linkedIn from "/linkedIn.webp";
 import gitHub from "/gitHub.webp";
 import email from "/email.webp";
@@ -7,50 +5,17 @@ import { ImageLink } from "../components/ImageLink";
 
 export const Contact = () => {
   return (
-    <div
-      className={css`
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        min-height: 100vh;
-        background: linear-gradient(to bottom, #fe8a75 0%, #b5cbed 100%);
-        padding: ${theme.spacing.sm};
-      `}
-    >
+    <div className="flex flex-col m-auto min-h-screen p-4 bg-brand-gradient-2">
       <div className="container-card">
         <h2 className="hidden">Contact</h2>
 
-        <div
-          className={
-            css`
-              display: flex;
-              flex-direction: column;
-              gap: ${theme.spacing.md};
-              margin: auto;
-            ` + " frosted-glass"
-          }
-        >
-          <div
-            className={css`
-              display: flex;
-              flex-direction: column;
-              gap: ${theme.spacing.xl};
-              margin: auto;
-            `}
-          >
-            You've heard a bit about me, I'd love to hear from you.
+        <div className="flex flex-col m-auto frosted-glass">
+          <div className="flex flex-col m-auto text-center">
+            You've heard a bit about me, <br />
+            I'd love to hear from you.
           </div>
 
-          <div
-            className={
-              css`
-                display: flex;
-                flex-direction: row;
-                gap: ${theme.spacing.lg};
-                justify-content: center;
-              ` + " container-card"
-            }
-          >
+          <div className="flex gap-6 justify-center container-card">
             <ImageLink
               alt="LinkedIn Logo"
               href="https://www.linkedin.com/in/christopher-flinchbaugh/"

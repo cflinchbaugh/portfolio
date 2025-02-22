@@ -62,7 +62,7 @@ describe("ProjectItem", () => {
   });
 
   describe("when imagePositionStart prop is false", () => {
-    it("sets data-image-position to 'row' when imagePositionStart is true", () => {
+    it("applies the flex-row class", () => {
       const updatedData = {
         ...data,
         imagePositionStart: true,
@@ -70,10 +70,12 @@ describe("ProjectItem", () => {
       render(<ProjectItem {...updatedData} />);
 
       const container = screen.getByTestId("project-item");
-      expect(container).toHaveAttribute("data-image-position", "row");
+      expect(container).toHaveClass("lg:flex-row");
     });
+  });
 
-    it("sets data-image-position to 'row-reverse' when imagePositionStart is false", () => {
+  describe("when imagePositionStart prop is true ", () => {
+    it("applies the flex-row-reverse class", () => {
       const updatedData = {
         ...data,
         imagePositionStart: false,
@@ -82,7 +84,7 @@ describe("ProjectItem", () => {
       render(<ProjectItem {...updatedData} />);
 
       const container = screen.getByTestId("project-item");
-      expect(container).toHaveAttribute("data-image-position", "row-reverse");
+      expect(container).toHaveClass("lg:flex-row-reverse");
     });
   });
 });

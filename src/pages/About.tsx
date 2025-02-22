@@ -1,67 +1,36 @@
-import { css } from "@emotion/css";
-import { theme } from "../theme";
 import useFadeIn from "../hooks/useFadeIn";
 
 const OneBoldDeveloper = () => {
   return (
-    <div
-      className={css`
-        text-align: center;
-        border-bottom: solid 1px;
-      `}
-    >
-      <span
-        className={css`
-          font-size: ${theme.fontSizes.lg};
-        `}
-      >
-        One
-      </span>
-      <span
-        className={css`
-          font-size: 1.5rem;
-          padding: ${theme.spacing.sm};
-          ${theme.mq.md} {
-            font-size: 10rem;
-          }
-        `}
-      >
-        BOLD
-      </span>
-      <span
-        className={css`
-          font-size: ${theme.fontSizes.lg};
-        `}
-      >
-        Developer
-      </span>
+    <div className="text-center border-b-1">
+      <span className="text-lg">One</span>
+      <span className="text-2xl md:text-[10rem] p-1.5 font-semibold">BOLD</span>
+      <span className="text-lg">Developer</span>
     </div>
   );
 };
 
 const People = () => {
   return (
-    <div
-      className={css`
-        ${theme.mq.md} {
-          text-align: end;
-        }
-      `}
-    >
+    <div className="md:text-end">
       <strong>
         I specialize in <i>people</i>.
       </strong>
+
+      <p>
+        Providing meaningful design feedback, shaping coding best-practices, and
+        communicating between lines of business are all paths that lead me to
+        the heart of development- creating an application that solves problems
+        for real people.
+      </p>
       <br />
-      Providing meaningful design feedback, shaping coding best-practices, and
-      communicating between lines of business are all paths that lead me to the
-      heart of development- creating an application that solves problems for
-      real people.
-      <br />
-      <br />I thrive at the intersection of technical excellence and user
-      experience, ensuring that the applications I build are not only functional
-      but also engaging and accessible. I've lead multidisciplinary teams,
-      optimized legacy projects, and spearheaded process improvements that have
-      driven measurable business impact for years.
+      <p>
+        I thrive at the intersection of technical excellence and user
+        experience, ensuring that the applications I build are not only
+        functional but also engaging and accessible. I've lead multidisciplinary
+        teams, optimized legacy projects, and spearheaded process improvements
+        that have driven measurable business impact for years.
+      </p>
     </div>
   );
 };
@@ -72,15 +41,19 @@ const Problems = () => {
       <strong>
         I solve <i>problems</i>.
       </strong>
-      <br />I am passionate about finding the root problem, identifying process
-      gaps, and ensuring consistency. I strive to analyze designs and code
-      without preconceptions to ensure never missing the forest for the trees.{" "}
+
+      <p>
+        I am passionate about finding the root problem, identifying process
+        gaps, and ensuring consistency. I strive to analyze designs and code
+        without preconceptions to ensure never missing the forest for the trees.{" "}
+      </p>
       <br />
-      <br />
-      I'm passionate about mentorship, accessibility, and pushing the boundaries
-      of UI/UX design. Whether its building a sleek, high-performance interface
-      or solving complex architectural challenges, I love creating solutions
-      that make a difference.
+      <p>
+        I'm passionate about mentorship, accessibility, and pushing the
+        boundaries of UI/UX design. Whether its building a sleek,
+        high-performance interface or solving complex architectural challenges,
+        I love creating solutions that make a difference.
+      </p>
     </div>
   );
 };
@@ -89,46 +62,15 @@ export const About = () => {
   useFadeIn();
 
   return (
-    <div
-      className={css`
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        min-height: 100vh;
-        background: linear-gradient(to bottom, #fe8a75 0%, #b5cbed 100%);
-        padding: ${theme.spacing.sm};
-      `}
-    >
+    <div className="flex flex-col m-auto min-h-screen p-2 bg-brand-gradient-2">
       <div className="container-card">
         <h2 className="hidden">About</h2>
 
-        <div
-          className={
-            css`
-              margin: auto;
-            ` + " container-card frosted-glass fade-in"
-          }
-        >
-          <div
-            className={
-              css`
-                display: flex;
-                flex-direction: column;
-                gap: ${theme.spacing.xl};
-                padding: ${theme.spacing.xl};
-                margin: auto;
-              ` + " container-card"
-            }
-          >
+        <div className="m-auto frosted-glass fade-in">
+          <div className="flex flex-col gap-8 md:p-8 m-auto">
             <OneBoldDeveloper />
 
-            <div
-              className={css`
-                ${theme.mq.md} {
-                  margin-bottom: ${theme.spacing.xl};
-                }
-              `}
-            >
+            <div className="md:mb-8">
               <strong>Hi, I'm Chris-</strong> a software engineer with over a
               decade of experience building scalable, user-focused applications.
               My passion lies in crafting intuitive and performant experiences
@@ -138,29 +80,12 @@ export const About = () => {
             </div>
 
             <div>
-              <div
-                className={css`
-                  display: flex;
-                  flex-direction: column;
-                  gap: ${theme.spacing.xl};
-                  ${theme.mq.md} {
-                    flex-direction: row;
-                  }
-                `}
-              >
-                <div
-                  className={css`
-                    flex: 1;
-                  `}
-                >
+              <div className="flex flex-col md:flex-row gap-8">
+                <div className="flex-1">
                   <People />
                 </div>
 
-                <div
-                  className={css`
-                    flex: 1;
-                  `}
-                >
+                <div className="flex-1">
                   <Problems />
                 </div>
               </div>
