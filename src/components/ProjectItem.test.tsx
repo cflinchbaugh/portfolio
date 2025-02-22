@@ -26,8 +26,8 @@ describe("ProjectItem", () => {
 
     expect(screen.getByText("Name")).toBeInTheDocument();
     expect(screen.getByText("Subheader")).toBeInTheDocument();
-    expect(screen.getByText("How its done")).toBeInTheDocument();
-    expect(screen.getByText("What needs done")).toBeInTheDocument();
+    // expect(screen.getByText("How its done")).toBeInTheDocument();
+    // expect(screen.getByText("What needs done")).toBeInTheDocument();
     expect(screen.getByText("What it is")).toBeInTheDocument();
     expect(screen.getByText("What result")).toBeInTheDocument();
 

@@ -23,6 +23,9 @@ export const ProjectItem = ({
     : "flex-col lg:flex-row-reverse";
 
   const [bgImage, setBgImage] = useState("");
+  const [activeDetails, setActiveDetails] = useState<
+    "challenges" | "approach" | "impact"
+  >("impact");
 
   useEffect(() => {
     const updateBgImage = () => {
@@ -89,19 +92,62 @@ export const ProjectItem = ({
           ))}
         </div>
 
-        <div>
-          <h4 className="font-bold">Challenges</h4>
-          <div className="fade-in">{challenges}</div>
-        </div>
+        <div className="flex flex-col gap-2 min-h-[40vh]">
+          <div className="flex flex-row gap-2">
+            <button
+              className={`${
+                activeDetails === "challenges"
+                  ? "bg-brand-primary-600"
+                  : "bg-brand-primary-400"
+              } text-white px-2 rounded-sm hover:cursor-pointer`}
+              onClick={() => setActiveDetails("challenges")}
+            >
+              Challenges
+            </button>
+            {"→"}
+            <button
+              className={`${
+                activeDetails === "approach"
+                  ? "bg-brand-primary-600"
+                  : "bg-brand-primary-400"
+              } text-white px-2 rounded-sm`}
+              onClick={() => setActiveDetails("approach")}
+            >
+              Approach
+            </button>
+            {"→"}
+            <button
+              className={`${
+                activeDetails === "impact"
+                  ? "bg-brand-primary-600"
+                  : "bg-brand-primary-400"
+              } text-white px-2 rounded-sm`}
+              onClick={() => setActiveDetails("impact")}
+            >
+              Impact
+            </button>
+          </div>
 
-        <div>
-          <h4 className="font-bold">Approach</h4>
-          <div className="fade-in">{approach}</div>
-        </div>
+          {activeDetails === "challenges" && (
+            <div>
+              <h4 className="font-bold">Challenges</h4>
+              <div>{challenges}</div>
+            </div>
+          )}
 
-        <div>
-          <h4 className="font-bold">Impact</h4>
-          <div className="fade-in">{impact}</div>
+          {activeDetails === "approach" && (
+            <div>
+              <h4 className="font-bold">Approach</h4>
+              <div>{approach}</div>
+            </div>
+          )}
+
+          {activeDetails === "impact" && (
+            <div>
+              <h4 className="font-bold">Impact</h4>
+              <div>{impact}</div>
+            </div>
+          )}
         </div>
       </div>
     </div>
