@@ -5,6 +5,8 @@ export type ProjectItemProps = {
   imagePositionStart?: boolean;
 } & Project;
 
+type ActiveDetail = "challenges" | "approach" | "impact";
+
 export const ProjectItem = ({
   approach,
   challenges,
@@ -23,9 +25,7 @@ export const ProjectItem = ({
     : "flex-col lg:flex-row-reverse";
 
   const [bgImage, setBgImage] = useState("");
-  const [activeDetails, setActiveDetails] = useState<
-    "challenges" | "approach" | "impact"
-  >("impact");
+  const [activeDetails, setActiveDetails] = useState<ActiveDetail>("impact");
 
   useEffect(() => {
     const updateBgImage = () => {
@@ -42,6 +42,12 @@ export const ProjectItem = ({
     window.addEventListener("resize", updateBgImage);
     return () => window.removeEventListener("resize", updateBgImage);
   }, [imageName]);
+
+  const activeDetailOptions: ActiveDetail[] = [
+    "challenges",
+    "approach",
+    "impact",
+  ];
 
   return (
     <div
@@ -94,38 +100,21 @@ export const ProjectItem = ({
 
         <div className="flex flex-col gap-2 min-h-[40vh]">
           <div className="flex flex-row gap-2">
-            <button
-              className={`${
-                activeDetails === "challenges"
-                  ? "bg-brand-primary-600"
-                  : "bg-brand-primary-400"
-              } text-white px-2 rounded-sm hover:cursor-pointer`}
-              onClick={() => setActiveDetails("challenges")}
-            >
-              Challenges
-            </button>
-            {"→"}
-            <button
-              className={`${
-                activeDetails === "approach"
-                  ? "bg-brand-primary-600"
-                  : "bg-brand-primary-400"
-              } text-white px-2 rounded-sm`}
-              onClick={() => setActiveDetails("approach")}
-            >
-              Approach
-            </button>
-            {"→"}
-            <button
-              className={`${
-                activeDetails === "impact"
-                  ? "bg-brand-primary-600"
-                  : "bg-brand-primary-400"
-              } text-white px-2 rounded-sm`}
-              onClick={() => setActiveDetails("impact")}
-            >
-              Impact
-            </button>
+            {activeDetailOptions.map((activeDetail, idx) => (
+              <span className="flex flex-row gap-1" key={activeDetail}>
+                <button
+                  className={`${
+                    activeDetails === activeDetail
+                      ? "bg-brand-primary-600"
+                      : "bg-brand-primary-400"
+                  } text-white px-2 rounded-sm hover:cursor-pointer`}
+                  onClick={() => setActiveDetails(activeDetail)}
+                >
+                  <span className="capitalize">{activeDetail}</span>
+                </button>
+                {idx < activeDetailOptions.length - 1 && "→"}
+              </span>
+            ))}
           </div>
 
           {activeDetails === "challenges" && (

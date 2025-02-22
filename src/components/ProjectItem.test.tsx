@@ -40,7 +40,7 @@ describe("ProjectItem", () => {
     it("renders Approach data", () => {
       render(<ProjectItem {...data} />);
 
-      fireEvent.click(screen.getByText("Approach"));
+      fireEvent.click(screen.getByText("approach"));
       expect(screen.getByText("How its done")).toBeInTheDocument();
     });
   });
@@ -49,7 +49,7 @@ describe("ProjectItem", () => {
     it("renders Challenges data", () => {
       render(<ProjectItem {...data} />);
 
-      fireEvent.click(screen.getByText("Challenges"));
+      fireEvent.click(screen.getByText("challenges"));
       expect(screen.getByText("What needs done")).toBeInTheDocument();
     });
   });
@@ -59,10 +59,10 @@ describe("ProjectItem", () => {
       render(<ProjectItem {...data} />);
 
       // Impact is rendered by default, so select something else first
-      fireEvent.click(screen.getByText("Challenges"));
+      fireEvent.click(screen.getByText("challenges"));
       expect(screen.getByText("What needs done")).toBeInTheDocument();
 
-      fireEvent.click(screen.getByText("Impact"));
+      fireEvent.click(screen.getByText("impact"));
       expect(screen.getByText("What result")).toBeInTheDocument();
     });
   });
