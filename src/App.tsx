@@ -5,7 +5,8 @@ import { Hero } from "./pages/Hero";
 
 import { Suspense, lazy } from "react";
 import { Skills } from "./pages/Skills";
-const Projects = lazy(() => import("./pages/Projects"));
+
+const ProfessionalHistory = lazy(() => import("./pages/ProfessionalHistory"));
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <About />
       <Achievements />
       <Suspense fallback={<div>Loading...</div>}>
-        <Projects />
+        <ProfessionalHistory />
       </Suspense>
       <Skills />
       <Contact />
