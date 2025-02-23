@@ -17,7 +17,7 @@ export const Achievements = () => {
   ];
 
   return (
-    <div className="flex flex-col min-h-full p-2 bg-brand-gradient-2">
+    <div className="flex flex-col min-h-full p-2 bg-brand-gradient-3">
       <div className="container-card">
         <h2 className="page-heading">Professional Achievements</h2>
 
@@ -31,7 +31,7 @@ export const Achievements = () => {
                   : "xl:col-span-1 xl:row-span-2"
               } fade-in`}
             >
-              <div className="flex h-full w-full frosted-glass">
+              <div className="flex h-full w-full bg-cyber-black-400 text-white rounded-lg p-5 border-2 border-cyber-red-500">
                 <div>
                   <h3 className="mb-2 text-2xl font-semibold">
                     {achievement.head}

@@ -31,6 +31,20 @@ function App() {
       <section>
         <Contact />
       </section>
+
+      <div
+        style={{
+          position: "fixed",
+          bottom: 0,
+          left: 0,
+          width: "100%",
+          height: "10vh",
+          background:
+            "linear-gradient(to top, var(--color-cyber-black-400) 10%, transparent)",
+          pointerEvents: "none",
+          zIndex: 100,
+        }}
+      />
     </main>
   );
 }

@@ -58,7 +58,7 @@ export const ProjectItem = ({
         <div
           role="img"
           aria-label={imageAriaLabel}
-          className="fade-in flex-none w-full lg:w-[25vw] min-h-[200px] bg-[var(--color-brand-primary-500)] bg-cover bg-no-repeat bg-center"
+          className="fade-in flex-none w-full lg:w-[25vw] min-h-[200px] bg-[var(--color-cyber-red-500)] bg-cover bg-no-repeat bg-center"
           style={{ backgroundImage: bgImage }}
         />
       )}
@@ -101,13 +101,16 @@ export const ProjectItem = ({
         <div className="flex flex-col gap-2 min-h-[40vh]">
           <div className="flex flex-row gap-2">
             {activeDetailOptions.map((activeDetail, idx) => (
-              <span className="flex flex-row gap-1" key={activeDetail}>
+              <span
+                className="flex flex-row gap-1 items-center"
+                key={activeDetail}
+              >
                 <button
                   className={`${
                     activeDetails === activeDetail
-                      ? "bg-brand-primary-600"
-                      : "bg-brand-primary-400"
-                  } text-white px-2 rounded-sm hover:cursor-pointer`}
+                      ? "bg-cyber-yellow-600 border-1"
+                      : "interactive"
+                  }  p-2 rounded-sm`}
                   onClick={() => setActiveDetails(activeDetail)}
                 >
                   <span className="capitalize">{activeDetail}</span>

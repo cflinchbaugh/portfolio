@@ -19,7 +19,10 @@ export const ProfessionalHistory = () => {
               imagePositionStart: Boolean(index % 2),
             };
             return (
-              <div className="frosted-glass" key={project.name}>
+              <div
+                className="rounded-lg p-5 border-2 border-cyber-red-500 bg-cyber-yellow-500"
+                key={project.name}
+              >
                 <ProjectItem key={project.name} {...data} />
               </div>
             );
