@@ -2,7 +2,7 @@ import useFadeIn from "../hooks/useFadeIn";
 
 const OneBoldDeveloper = () => {
   return (
-    <div className="text-center border-b-1">
+    <div className="text-center border-b-1 text-cyber-yellow-500">
       <span className="text-lg">One</span>
       <span className="text-2xl md:text-[10rem] p-1.5 font-semibold">BOLD</span>
       <span className="text-lg">Developer</span>
@@ -13,8 +13,8 @@ const OneBoldDeveloper = () => {
 const People = () => {
   return (
     <div className="md:text-end">
-      <strong>
-        I specialize in <i>people</i>.
+      <strong className="text-cyber-yellow-500">
+        I specialize in <i className="text-cyber-yellow-400">people</i>.
       </strong>
 
       <p>
@@ -38,8 +38,8 @@ const People = () => {
 const Problems = () => {
   return (
     <div>
-      <strong>
-        I solve <i>problems</i>.
+      <strong className="text-cyber-yellow-500">
+        I solve <i className="text-cyber-yellow-400">problems</i>.
       </strong>
 
       <p>
@@ -66,17 +66,19 @@ export const About = () => {
       <div className="container-card">
         <h2 className="hidden">About</h2>
 
-        <div className="m-auto frosted-glass fade-in">
-          <div className="flex flex-col gap-8 md:px-8 m-auto">
+        <div className="m-auto fade-in">
+          <div className="flex flex-col gap-8 md:px-8 m-auto bg-cyber-black-400 text-white rounded-lg p-5 border-2 border-cyber-red-500">
             <OneBoldDeveloper />
 
             <div className="md:mb-8">
-              <strong>Hi, I'm Chris-</strong> a software engineer with over a
-              decade of experience building scalable, user-focused applications.
-              My passion lies in crafting intuitive and performant experiences
-              using modern frameworks like React and React Native, but I have a
-              strong background in API integration, architecture optimization,
-              and testing.
+              <strong className="text-cyber-yellow-500">
+                Hi, I'm <i>Chris</i>-
+              </strong>{" "}
+              a software engineer with over a decade of experience building
+              scalable, user-focused applications. My passion lies in crafting
+              intuitive and performant experiences using modern frameworks like
+              React and React Native, but I have a strong background in API
+              integration, architecture optimization, and testing.
             </div>
 
             <div>
