@@ -12,15 +12,43 @@ const ProfessionalHistory = lazy(() => import("./pages/ProfessionalHistory"));
 function App() {
   return (
     <main>
-      <Hero />
-      <ThreeDCarousel />
-      <About />
-      <Achievements />
-      <Suspense fallback={<div>Loading...</div>}>
-        <ProfessionalHistory />
-      </Suspense>
-      <Skills />
-      <Contact />
+      <section>
+        <Hero />
+      </section>
+      <section>
+        <ThreeDCarousel />
+      </section>
+      <section>
+        <About />
+      </section>
+      <section>
+        <Achievements />
+      </section>
+      <section>
+        <Suspense fallback={<div>Loading...</div>}>
+          <ProfessionalHistory />
+        </Suspense>
+      </section>
+      <section>
+        <Skills />
+      </section>
+      <section>
+        <Contact />
+      </section>
+
+      <div
+        style={{
+          position: "fixed",
+          bottom: 0,
+          left: 0,
+          width: "100%",
+          height: "10vh",
+          background:
+            "linear-gradient(to top, var(--color-cyber-black-400) 10%, transparent)",
+          pointerEvents: "none",
+          zIndex: 100,
+        }}
+      />
     </main>
   );
 }

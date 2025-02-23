@@ -47,7 +47,7 @@ export const Carousel = ({ children }: CarouselProps) => {
       {/* Prev Button */}
       <button
         onClick={prevSlide}
-        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded z-10"
+        className="absolute left-2 top-1/2 -translate-y-1/2 interactive p-2 rounded z-10"
       >
         ‹
       </button>
@@ -68,7 +68,7 @@ export const Carousel = ({ children }: CarouselProps) => {
       {/* Next Button */}
       <button
         onClick={nextSlide}
-        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded z-10"
+        className="absolute right-2 top-1/2 -translate-y-1/2 interactive p-2 rounded z-10"
       >
         ›
       </button>
