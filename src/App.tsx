@@ -5,6 +5,7 @@ import { Hero } from "./pages/Hero";
 
 import { Suspense, lazy } from "react";
 import { Skills } from "./pages/Skills";
+import ThreeDCarousel from "./components/ThreeDCarousel";
 
 const ProfessionalHistory = lazy(() => import("./pages/ProfessionalHistory"));
 
@@ -13,6 +14,9 @@ function App() {
     <main>
       <section>
         <Hero />
+      </section>
+      <section>
+        <ThreeDCarousel />
       </section>
       <section>
         <About />
