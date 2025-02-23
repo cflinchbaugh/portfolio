@@ -91,7 +91,7 @@ export const ProjectItem = ({
           {tags.map((tag) => (
             <div
               key={tag}
-              className="text-xs border border-gray-400 rounded-lg px-2 py-1"
+              className="text-xs border border-cyber-red-500 bg-cyber-yellow-400 rounded-lg px-2 py-1"
             >
               {tag}
             </div>
@@ -110,7 +110,7 @@ export const ProjectItem = ({
                     activeDetails === activeDetail
                       ? "bg-cyber-yellow-600 border-1"
                       : "interactive"
-                  }  p-2 rounded-sm`}
+                  }  p-2 rounded-sm text-xs md:text-base`}
                   onClick={() => setActiveDetails(activeDetail)}
                 >
                   <span className="capitalize">{activeDetail}</span>
