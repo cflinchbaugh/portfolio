@@ -20,6 +20,7 @@
   .bg-brand-gradient-1 {
     background: linear-gradient(
       to bottom,
+      var(--color-cyber-yellow-500) 0%,
       var(--color-cyber-yellow-400) 75%,
       var(--color-cyber-yellow-500) 100%
     );
@@ -68,6 +69,7 @@ body {
   font-size: x-large;
   padding-bottom: 1rem;
   font-weight: bolder;
+  color: var(--color-cyber-red-500);
 }
 @media screen and (min-width: 768px) {
   .page-heading {
