@@ -2,6 +2,8 @@
 
 A portfolio highlighting the person behind the keyboard, his accomplishments, skills, and personal philosophy as a software engineer.
 
+Demo: https://cflinchbaugh.github.io/portfolio/
+
 ## Setup
 
 ```
