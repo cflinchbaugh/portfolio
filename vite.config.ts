@@ -5,7 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig(({ mode }) => ({
   plugins: [react(), tailwindcss()],
-  base: mode === "production" ? "/portfolio-v2/" : "/", // Only set base in production
+  base: mode === "production" ? "/portfolio/" : "/", // Only set base in production
   build: {
     outDir: "dist",
   },
