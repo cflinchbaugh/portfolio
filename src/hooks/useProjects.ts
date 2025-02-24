@@ -68,7 +68,7 @@ const projects: Project[] = [
       },
       {
         name: "Repo",
-        url: "https://github.com/cflinchbaugh/portfolio-v2",
+        url: "https://github.com/cflinchbaugh/portfolio",
       },
     ],
     tags: [
