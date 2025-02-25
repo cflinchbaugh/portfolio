@@ -7,10 +7,13 @@ type NavItemsProps = {
 
 const NavItems = ({ handleClickItem, navLinks }: NavItemsProps) => {
   return (
-    <ul className="flex flex-col items-center gap-4 sm:flex-row md:gap-6 relative z-20">
+    <ul
+      className="flex flex-col opacity-80 relative z-20 rounded overflow-clip w-full
+        gap-2 sm:gap-0 sm:items-center sm:flex-row sm:w-fit"
+    >
       {navLinks.map((item) => (
         <li
-          className="max-sm:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5"
+          className="text-cyber-blue-500 bg-cyber-black-500 px-4 sm:px-3 py-4 sm:py-0 hover:bg-cyber-blue-500 hover:text-cyber-black-500 transition-colors"
           key={item.name}
         >
           <a href={item.href} className="nav-li_a" onClick={handleClickItem}>
@@ -26,58 +29,43 @@ type NavLink = {
   href: string;
   name: string;
 };
+
 const Navbar = ({ navLinks }: { navLinks: NavLink[] }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed sm:shadow-md top-0 left-0 right-0 z-50 bg-cyber-yellow-500">
+    <header className="fixed top-2 left-0 right-0 z-50">
       <div className="mx-auto max-w-7xl">
-        <div className="mx-auto flex items-center justify-between py-1 sm:px-4 px-5">
-          <a
-            href="#home"
-            className="text-xl font-bold text-neutral-400 transition-colors hover:text-white"
-          >
-            Chris
-          </a>
-
+        <div className="mx-auto flex items-center justify-end py-1 sm:px-4 px-5">
           <button
             className="text-neutral-400 hover:text-white focus:outline-none sm:hidden flex"
             aria-label="Toggle menu"
+            onClick={() => setIsOpen((prev) => !prev)}
           >
             <img
               alt="menu-toggle"
               className="h-6 w-6 interactive"
-              onClick={() => {
-                setIsOpen((prev) => !prev);
-              }}
               src={isOpen ? "close.svg" : "menu.svg"}
             />
           </button>
-
-          <nav className="sm:flex hidden">
-            <NavItems
-              handleClickItem={() => setIsOpen(false)}
-              navLinks={navLinks}
-            />
-          </nav>
         </div>
       </div>
 
-      <div
+      {/* Single Nav - Controlled by CSS */}
+      <nav
         className={`
-        absolute left-2 right-2 shadow-lg bg-black-200 backdrop-blur-lg transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block
-        ${isOpen ? "max-h-screen border rounded" : "max-h-0"}`}
+          absolute left-4 sm:left-0 sm:mr-4 right-4 bg-cyber-black-400 text-cyber-blue-500 sm:backdrop-blur-lg transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto
+          ${isOpen ? "max-h-screen" : "max-h-0"}
+          sm:max-h-none sm:block sm:relative  sm:bg-transparent
+        `}
       >
-        <nav className="p-5">
+        <div className="flex p-5 sm:p-0 sm:justify-end">
           <NavItems
-            handleClickItem={() => {
-              console.log("click");
-              setIsOpen(false);
-            }}
+            handleClickItem={() => setIsOpen(false)}
             navLinks={navLinks}
           />
-        </nav>
-      </div>
+        </div>
+      </nav>
     </header>
   );
 };
