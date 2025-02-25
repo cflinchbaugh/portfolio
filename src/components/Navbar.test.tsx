@@ -21,35 +21,29 @@ describe("Navbar Component", () => {
   test("toggles mobile menu when clicking the button", () => {
     render(<Navbar navLinks={mockNavLinks} />);
 
-    // Check if the menu is initially closed
     const mobileMenu = screen.getByRole("navigation", { hidden: true });
-    expect(mobileMenu).toHaveClass("max-h-0"); // Initially closed
+    expect(mobileMenu).toHaveClass("max-h-0"); // Verify initially closed
 
-    // Click the toggle button
     const menuButton = screen.getByRole("button", { name: /toggle menu/i });
     fireEvent.click(menuButton);
 
-    // Now the menu should be open
-    expect(mobileMenu).toHaveClass("max-h-screen");
+    expect(mobileMenu).toHaveClass("max-h-screen"); // Verify open behavior
 
-    // Click again to close the menu
     fireEvent.click(menuButton);
-    expect(mobileMenu).toHaveClass("max-h-0");
+    expect(mobileMenu).toHaveClass("max-h-0"); // Verify close behavior
   });
 
   test("clicking a nav link closes the mobile menu", () => {
     render(<Navbar navLinks={mockNavLinks} />);
 
-    // Open the menu
     const menuButton = screen.getByRole("button", { name: /toggle menu/i });
-    fireEvent.click(menuButton);
+    fireEvent.click(menuButton); // open
 
-    // Click on a navigation link
     const navLink = screen.getByText("Contact");
     fireEvent.click(navLink);
 
     // Menu should close
     const mobileMenu = screen.getByRole("navigation", { hidden: true });
-    expect(mobileMenu).toHaveClass("max-h-0");
+    expect(mobileMenu).toHaveClass("max-h-0"); // closeed
   });
 });
