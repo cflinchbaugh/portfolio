@@ -43,6 +43,10 @@
   }
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 html {
   background-color: var(--color-cyber-black-400);
 }
