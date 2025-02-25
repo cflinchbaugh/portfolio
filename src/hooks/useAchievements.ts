@@ -9,8 +9,8 @@ type Achievement = {
 const achievements: Achievement[] = [
   {
     id: 0,
-    head: "Drove a 100% increase in deposits",
-    tail: "at a fintech startup by developing a cutting-edge mobile check deposit system with AI-powered text recognition.",
+    head: "Drove a 100% increase in fintech deposits",
+    tail: "at a startup by developing a cutting-edge mobile check deposit system with AI-powered text recognition.",
   },
   {
     id: 1,
@@ -34,8 +34,8 @@ const achievements: Achievement[] = [
   },
   {
     id: 5,
-    head: "Achieved WCAG AA compliance",
-    tail: "across enterprise software by advocating for and implementing accessibility standards, enhancing usability for tens of thousands of users and unlocking new business opportunities.",
+    head: "Achieved WCAG AA compliance across enterprise software",
+    tail: "by advocating for and implementing accessibility standards, enhancing usability for tens of thousands of users and unlocking new business opportunities.",
   },
   {
     id: 6,
