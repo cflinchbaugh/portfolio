@@ -5,30 +5,51 @@ import { Hero } from "./pages/Hero";
 
 import { Suspense, lazy } from "react";
 import { Skills } from "./pages/Skills";
+import Navbar from "./components/Navbar";
 
 const ProfessionalHistory = lazy(() => import("./pages/ProfessionalHistory"));
+
+const navLinks = [
+  {
+    name: "About",
+    href: "#about",
+  },
+  {
+    name: "Achievements",
+    href: "#achievements",
+  },
+  {
+    name: "Skills",
+    href: "#skills",
+  },
+  {
+    name: "Contact",
+    href: "#contact",
+  },
+];
 
 function App() {
   return (
     <main>
-      <section>
+      <Navbar navLinks={navLinks} />
+      <section id="home">
         <Hero />
       </section>
-      <section>
+      <section id="about">
         <About />
       </section>
-      <section>
+      <section id="achievements">
         <Achievements />
       </section>
-      <section>
+      <section id="professionalHistory">
         <Suspense fallback={<div>Loading...</div>}>
           <ProfessionalHistory />
         </Suspense>
       </section>
-      <section>
+      <section id="skills">
         <Skills />
       </section>
-      <section>
+      <section id="contact">
         <Contact />
       </section>
 
