@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type NavItemsProps = {
   handleClickItem: () => void;
@@ -33,40 +33,66 @@ type NavLink = {
 const Navbar = ({ navLinks }: { navLinks: NavLink[] }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  return (
-    <header className="fixed top-2 left-0 right-0 z-50">
-      <div className="mx-auto max-w-7xl">
-        <div className="mx-auto flex items-center justify-end py-1 sm:px-4 px-5">
-          <button
-            className="text-neutral-400 hover:text-white focus:outline-none sm:hidden flex"
-            aria-label="Toggle menu"
-            onClick={() => setIsOpen((prev) => !prev)}
-          >
-            <img
-              alt="menu-toggle"
-              className="h-6 w-6 interactive"
-              src={isOpen ? "close.svg" : "menu.svg"}
-            />
-          </button>
-        </div>
-      </div>
+  useEffect(() => {
+    const handleResize = () => {
+      setIsOpen(false);
+    };
 
-      {/* Single Nav - Controlled by CSS */}
-      <nav
-        className={`
-          absolute left-4 sm:left-0 sm:mr-4 right-4 bg-cyber-black-400 text-cyber-blue-500 sm:backdrop-blur-lg transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto
+    if (isOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [isOpen]);
+
+  return (
+    <>
+      <header className="fixed top-2 left-0 right-0 z-50">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto flex items-center justify-end py-1 sm:px-4 px-5">
+            <button
+              className="text-neutral-400 hover:text-white focus:outline-none sm:hidden flex"
+              aria-label="Toggle menu"
+              onClick={() => setIsOpen((prev) => !prev)}
+            >
+              <img
+                alt="menu-toggle"
+                className="h-6 w-6 interactive"
+                src={isOpen ? "close.svg" : "menu.svg"}
+              />
+            </button>
+          </div>
+        </div>
+
+        <nav
+          className={`
+          absolute left-0 right-0 bg-cyber-black-400 text-cyber-blue-500 transition-all duration-300 ease-in-out overflow-hidden z-20 mx-2
           ${isOpen ? "max-h-screen" : "max-h-0"}
           sm:max-h-none sm:block sm:relative  sm:bg-transparent
         `}
-      >
-        <div className="flex p-5 sm:p-0 sm:justify-end">
-          <NavItems
-            handleClickItem={() => setIsOpen(false)}
-            navLinks={navLinks}
-          />
-        </div>
-      </nav>
-    </header>
+        >
+          <div className="px-4">
+            <div className="flex sm:justify-end border-cyber-blue-500">
+              <NavItems
+                handleClickItem={() => setIsOpen(false)}
+                navLinks={navLinks}
+              />
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      {isOpen && (
+        <div className="fixed sm:hidden top-0 right-0 bottom-0 left-0 z-10 frosted-glass overscroll-none"></div>
+      )}
+    </>
   );
 };
 
