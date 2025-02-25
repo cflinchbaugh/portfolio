@@ -21,7 +21,7 @@ export const Achievements = () => {
       <div className="container-card">
         <h2 className="page-heading">Professional Achievements</h2>
 
-        <div className="grid gap-5 h-full grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:grid-rows-8">
+        <div className="grid gap-2 h-full grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:grid-rows-8">
           {achievements.map((achievement, index) => (
             <div
               key={index}
@@ -31,12 +31,12 @@ export const Achievements = () => {
                   : "xl:col-span-1 xl:row-span-2"
               } fade-in`}
             >
-              <div className="flex h-full w-full bg-cyber-black-400 text-white rounded-lg p-5 border-2 border-cyber-red-500">
+              <div className="flex h-full w-full bg-cyber-black-400 text-white rounded-lg p-2 sm:p-3 border-2 border-cyber-red-500">
                 <div>
-                  <h3 className="mb-2 text-2xl font-semibold">
+                  <h3 className="mb-1 text-md text-cyber-yellow-500 font-semibold">
                     {achievement.head}
                   </h3>
-                  <p>{achievement.tail}</p>
+                  <p className="text-xs sm:text-sm">{achievement.tail}</p>
                 </div>
               </div>
             </div>
