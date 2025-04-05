@@ -116,8 +116,8 @@ const projects: Project[] = [
       "The website successfully increased customer engagement and boosted bookings by over 100%, giving the business a much-needed online presence. Customers frequently praised the site's design and usability, reinforcing the brand's credibility. The site remained active for several years, supporting the business until its closure due to pandemic-era challenges and ownership changes.",
     links: [
       {
-        name: "Website (Archived)",
-        url: "https://web.archive.org/web/20220308053756/https:/www.didiandsmilingjohns.com/",
+        name: "Website (Dev Archived)",
+        url: "https://dev-didiandsmilingjohns.netlify.app/",
       },
     ],
     tags: [
